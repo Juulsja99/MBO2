@@ -5,13 +5,14 @@ body{
 }
 
 img{
-    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 p{
     font-size: 13px;
     color: white;
     margin-left: 50%;
+    margin-bottom: 20px;
 
 
 }
