@@ -1,36 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
 body{
-    font-size: 20px;
-    font-family: Verdana, sans-serif ;
-    background-color: rgb(42, 42, 42);
-    background-image: url(img/Achtergrond1.webp);
-    background-repeat: no-repeat;
+    background-color: #313132;
+}
+
+    .banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url("img/Achtergrond1.webp");
+    background-color: #313132;
     background-size: cover;
+    background-position: center;
+    font-family: "Montserrat", sans-serif;
+    }
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.Logo{
-    margin-top: 1%;
-    margin-left: 8%;
+.logo{
+    width: 120px;
+    cursor: pointer;
+    margin-right: auto;
 }
 
-.Toolbar{
-    font-size: 13px;
-    color: white;
-    margin-left: 50%;
-    margin-top: -3%;
-  
-   
+.navbar .taal a{
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+}
+.nl{
+    text-decoration: none;
+    color: #0ACCEA;
 
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease Øs
+    }
+.navbar .toolbar a{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.eng,
+.navbar .toolbar a{
+    text-decoration: none;
+    color: #fff;
+
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease Øs
+}
+
+.toolbar a::after{
+    content: '';
+    height: 1.5px;
+    width: 0%;
+    background: #0ACCEA;
+    position: absolute;
+    left: 0;
+    bottom: -10;
+    transition: 0.5s;
+}
+
+.toolbar a:hover::after{
+    width: 100%;
+}
+
+.toolbar a:hover,
+.eng:hover{
+
+    color: #0ACCEA;
+}
+article{
+    width: 90vw;
+    margin: 0 auto;
 
 }
-.Algemeneinfo{
+.intro{
     font-size: 20px;
     color: rgb(225, 223, 223);
-    -webkit-text-stroke: 0.3px rgb(9, 255, 255);
-    font-family: Verdana;
+
     text-align: center;
-    margin: auto;
-    margin-top: 100px;
+    margin: 0 auto;
+    margin-top: 360px;
     width: 50%;
-    padding: 40px;
+    padding: 30px;
 }
 
+.intro2{
+    font-size: 20px;
+    color:#0ACCEA;
+    text-align: center;
+    padding-left: 15%;
+}
+.geschiedeniesTitel{
+    color: white;
+    width: 60vw;
+    margin: 0 auto;
+    
+}
+
+.geschiedenies{
+    color: #fff;
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 100px;
+}
