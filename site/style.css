@@ -42,11 +42,20 @@ body{
 }
 .nl{
     text-decoration: none;
-    color: #0ACCEA;
-
     font-weight: 500;
     font-size: 15px;
-    transition: all 0.3s ease Øs
+    transition: all 0.3s ease Øs;
+
+    color: #0ACCEA;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0bc4e1,
+        0 0 82px #0ACCEA,
+        0 0 92px #0ACCEA,
+        0 0 102px #0ACCEA,
+        0 0 151px #0ACCEA;
     }
 .navbar .toolbar a{
     list-style: none;
@@ -83,6 +92,15 @@ body{
 .eng:hover{
 
     color: #0ACCEA;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0bc4e1,
+        0 0 82px #0ACCEA,
+        0 0 92px #0ACCEA,
+        0 0 102px #0ACCEA,
+        0 0 151px #0ACCEA;
 }
 article{
     width: 90vw;
@@ -91,27 +109,41 @@ article{
 }
 .intro{
     font-size: 20px;
-    color: rgb(225, 223, 223);
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0bc4e1,
+        0 0 82px #0ACCEA,
+        0 0 92px #0ACCEA,
+        0 0 102px #0ACCEA,
+        0 0 151px #0ACCEA;
 
     text-align: center;
     margin: 0 auto;
-    margin-top: 360px;
+    margin-top: 100px;
     width: 50%;
-    padding: 30px;
+    padding: 100px;
 }
 
 .intro2{
     font-size: 20px;
-    color:#0ACCEA;
+    color: #0ACCEA;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0bc4e1,
+        0 0 82px #0ACCEA,
+        0 0 92px #0ACCEA,
+        0 0 102px #0ACCEA,
+        0 0 151px #0ACCEA;
     text-align: center;
     padding-left: 15%;
-}
-.geschiedeniesTitel{
-    color: white;
-    width: 60vw;
-    margin: 0 auto;
     
 }
+
 
 .geschiedenies{
     color: #fff;
