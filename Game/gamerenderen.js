@@ -13,6 +13,6 @@ export class GameRenderer
        g.fillRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight);
        
        g.fillStyle = "#e31926";
-       g.fillRect(0, 0, 10, 10);  
+       g.fillRect(this.game.x, this.game.y, 10, 10);  
    }
 }
