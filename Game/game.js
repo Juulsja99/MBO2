@@ -13,12 +13,17 @@ class Game
 
     init()
     {
-     let scope = this; 
-     this.renderer.canvas.addEventListener("mousemove", function(event)
-      {
-        scope.logic.mouseMoved(event); 
-    } )
-     setInterval(function () {scope.doGameFrame() }, 33);
+     this.renderer.loadImages();
+    }
+
+    startGame()
+    {
+        let scope = this;
+        this.renderer.canvas.addEventListener("mousemove", function(event)
+        {
+          scope.logic.mouseMoved(event); 
+        } )
+       setInterval(function () {scope.doGameFrame() }, 33);
     }
 
     doGameFrame()
