@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@600&family=Roboto:ital,wght@1,700&display=swap');
 
 *{
     margin: 0;
@@ -8,11 +9,14 @@
 body{
     background-color: #313132;
 }
+body::-webkit-scrollbar{
+    display: none;
+  }
 
-    .banner {
+.banner {
     width: 100%;
     height: 100vh;
-    background-image: url("img/Achtergrond1.webp");
+    background-image: url("img/Schermafbeelding 2022-12-16 113626.png");
     background-color: #313132;
     background-size: cover;
     background-position: center;
@@ -34,7 +38,7 @@ body{
     margin-right: auto;
 }
 
-.navbar .taal a{
+.navbar ul li{
     list-style: none;
     display: inline-block;
     margin: 0 5px;
@@ -46,34 +50,34 @@ body{
     font-size: 15px;
     transition: all 0.3s ease Øs;
 
-    color: #0ACCEA;
+    color: #fff;
     text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #0bc4e1,
+        0 0 7px #0ACCEA,
+        0 0 10px #0ACCEA,
+        0 0 21px #0ACCEA,
+        0 0 42px #0ACCEA,
         0 0 82px #0ACCEA,
         0 0 92px #0ACCEA,
         0 0 102px #0ACCEA,
         0 0 151px #0ACCEA;
     }
-.navbar .toolbar a{
+
+    .navbar ul li{
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
 }
 .eng,
-.navbar .toolbar a{
+.navbar ul li a{
     text-decoration: none;
     color: #fff;
-
     font-weight: 500;
     font-size: 15px;
     transition: all 0.3s ease Øs
 }
 
-.toolbar a::after{
+.toolbar::after{
     content: '';
     height: 1.5px;
     width: 0%;
@@ -84,70 +88,242 @@ body{
     transition: 0.5s;
 }
 
-.toolbar a:hover::after{
+.toolbar:hover::after{
     width: 100%;
 }
 
-.toolbar a:hover,
+.navbar a:hover,
 .eng:hover{
-
-    color: #0ACCEA;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #0bc4e1,
-        0 0 82px #0ACCEA,
-        0 0 92px #0ACCEA,
-        0 0 102px #0ACCEA,
-        0 0 151px #0ACCEA;
-}
-article{
-    width: 90vw;
-    margin: 0 auto;
-
-}
-.intro{
-    font-size: 20px;
     color: #fff;
     text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #0bc4e1,
+        0 0 7px #0ACCEA,
+        0 0 10px #0ACCEA,
+        0 0 21px #0ACCEA,
+        0 0 42px #0ACCEA,
         0 0 82px #0ACCEA,
         0 0 92px #0ACCEA,
         0 0 102px #0ACCEA,
         0 0 151px #0ACCEA;
-
+}
+h2{
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     margin: 0 auto;
-    margin-top: 100px;
-    width: 50%;
-    padding: 100px;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
 }
-
-.intro2{
-    font-size: 20px;
-    color: #0ACCEA;
+.intro{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 200px;
+    color: #fff;
     text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #0bc4e1,
+        0 0 7px #0ACCEA,
+        0 0 10px #0ACCEA,
+        0 0 21px #0ACCEA,
+        0 0 42px #0ACCEA,
         0 0 82px #0ACCEA,
         0 0 92px #0ACCEA,
         0 0 102px #0ACCEA,
         0 0 151px #0ACCEA;
-    text-align: center;
-    padding-left: 15%;
-    
 }
 
+h3, p{
+    width: 60vw;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
 
-.geschiedenies{
+h3{
+    color: #fff;
+    text-shadow:
+        0 0 7px #0ACCEA,
+        0 0 10px #0ACCEA,
+        0 0 21px #0ACCEA,
+        0 0 42px #0ACCEA,
+        0 0 82px #0ACCEA,
+        0 0 92px #0ACCEA,
+        0 0 102px #0ACCEA,
+        0 0 151px #0ACCEA;
+        margin-bottom: 100px;
+        margin-top: 150px;
+}
+p{
     color: #fff;
     width: 60vw;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-bottom: 300px;
+}
+.center{
+    text-align: center;
+}
+
+
+
+.container{
+    position: relative;
+    width: 800px;
+    min-width: 350px;
+    min-height: 250px;
+    padding-bottom: 40px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.wrapper{
+    width: 500%;
+    height: 545px;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.wrapper2{
+    width: 300%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.card{
+    width: 800px;
+    background: #313132;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.card2{
+    width: 400px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.card-thumb{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.card-thumb2{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.client-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.indicators{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicators button{
+    border: none;
+    outline: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #827474;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.butten1, .butten2, .butten3{
+    display: none;
+}
+
+button.active{
+    width: 40px;
+    border-radius: 50px;
+    background: #827474;
+}
+
+@media (max-width: 20000000000px){
+    .butten1{
+        display:contents;
+    }
+}
+
+@media (max-width: 800px){
+    .container{
+        width: 70%;
+        margin: auto;
+    }
+    .card2, .card{
+        flex-direction: column;
+    }
+    
+    .card-thumb2, .card-thumb{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .card-body{
+        width: 100%;
+        min-height: auto;
+        margin-left: 0;
+    }
+}
+@media (max-width: 700px){
+    .wrapper2{
+        width: 1%;
+    }
+    .butten2{
+        display:contents;
+    }
+}
+
+@media (max-width: 470px){
+    .wrapper2{
+        width: 900%;
+    }
+    .card-body{
+        margin-left: auto;
+    }
+    .butten3{
+        display:contents;
+    }
+    .indicators button{
+        width: 10px;
+        height: 10px;
+        }
+        button.active{
+            width: 30px;
+        }
+}
+
+@media (max-width: 360px){
+    .indicators button{
+        width: 8px;
+        height: 8px;
+        }
 }

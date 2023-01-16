@@ -4,39 +4,169 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="banner">
-    <div class="navbar">
-    <img src="img\logo.png" class="logo">
-    <div class="toolbar">
-        <a href="#geschiedeniesTitel">Geschiedenis</a>
-        <a href="#">Openingstijden</a>
-        <a href="#">Contact</a>
-        <a href="#">Reviews</a>
-        <a href="#">Mini Game</a>
-    </div>
-    <div class="taal">
-        <a class="nl"href="#">NL</a>
-        <a class="eng"href="#">ENG</a>
-    </div>
+<div id="top" class="banner">
+    <nav class="navbar">
+        <img src="img\logo.png" class="logo">
+        <ul>
+            <li class="toolbar"><a href="#geschiedenies">Geschiedenis</a></li>
+            <li class="toolbar"><a href="#Openingstijden">Openingstijden</a></li>
+            <li class="toolbar"><a href="#">Contact</a></li>
+            <li class="toolbar"><a href="#Minigame">Mini Game</a></li>
+        </ul>
+        <ul>
+            <li class="nl"><a href="#">NL</a></li>
+            <li class="eng"><a href="#">ENG</a></li>
+        </ul>
+    </nav>
+    <h2>Het Nationaal Videogame Museum is 'the place to be' voor iedereen die meer wil weten (én beleven) over de geschiedenis,
+        maatschappelijke en culturele kant van videogames.
+        Het museum laat haar bezoekers ook de games van morgen ervaren.
+        Gamers van jong tot oud zijn welkom om te spelen, ontdekken,
+        leren en ervaringen online te delen.</h2>
+        <p class="intro" style="letter-spacing:0.7em;">ENTERTAINMENT | EDUCATION | EXPERIENCE</p>
 </div>
+
+
 <article>
-    <p class="intro">Het Nationaal Videogame Museum is 'the place to be' voor iedereen die meer wil weten (én beleven) over de geschiedenis,
-         maatschappelijke en culturele kant van videogames.
-          Het museum laat haar bezoekers ook de games van morgen ervaren.
-           Gamers van jong tot oud zijn welkom om te spelen, ontdekken,
-            leren en ervaringen online te delen.</p>
-    <span class='intro2' style="letter-spacing:0.7em;">ENTERTAINMENT | EDUCATION | EXPERIENCE</span>
-    <p id="geschiedeniesTitel">Geschiedenies</p>
-    <p class="geschiedenies">Een garagebox in Den Haag is de plek waar het avontuur in 2008 begon,
-         met twee vrienden Hasan Tasdemir en Pascal Rappailles.
-          De garagebox werd al snel te klein waarna ze uitweken naar een loods op een industrieterrein.
-           Helaas was de loods niet verwarmd en moest midden in de winter alles worden overgebracht naar een leegstaand Ministerie van Landbouw.
-            Toen ook dit pand leeggeruimd moest worden,
-             werd de toenmalige collectie van 10 arcade videogames met wat reserveonderdelen opgeslagen in een oude showroom voor klassieke auto's.
-              Omdat daar geen ruimte was om de kasten te renoveren of te bespelen werd uitgekeken naar passende ruimte,
-               Die werd in 2011 gevonden aan de Cobaltstraat in Zoetermeer.
+    <h3 id="geschiedenies">Geschiedenies</h3>
+                <p>Een garagebox in Den Haag is de plek waar het avontuur in 2008 begon,
+                met twee vrienden Hasan Tasdemir en Pascal Rappailles.
+                De garagebox werd al snel te klein waarna ze uitweken naar een loods op een industrieterrein.
+                Helaas was de loods niet verwarmd en moest midden in de winter alles worden overgebracht naar een leegstaand Ministerie van Landbouw.
+                Toen ook dit pand leeggeruimd moest worden,
+                werd de toenmalige collectie van 10 arcade videogames met wat reserveonderdelen opgeslagen in een oude showroom voor klassieke auto's.
+                Omdat daar geen ruimte was om de kasten te renoveren of te bespelen werd uitgekeken naar passende ruimte,
+                Die werd in 2011 gevonden aan de Cobaltstraat in Zoetermeer.
                 Daar besloot Hasan om met 4 vrienden de locatie te huren en kon het avontuur groeien tot een eigen ontmoetingsplek om hun hobby uit te oefenen en lekker te ontspannen met een game.</p>
+
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="card">
+                            <div class="card-thumb">
+                                <img src="img\img/20221116_122842.jpg" class="client-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-thumb">
+                                <img src="img\img/20221116_130756.jpg" class="client-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-thumb">
+                                <img src="img\img/20221116_133706.jpg" class="client-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-thumb">
+                                <img src="img\img/20221116_135159.jpg" class="client-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-thumb">
+                                <img src="img\img/20221116_135612.jpg" class="client-img" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="indicators">
+                        <button class="active"></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </div>
+                <script src="index.js"></script>
+
+    <h3 id="Openingstijden">Openingstijden</h3>
+                <p>Maandag<br>
+                Gesloten<br>
+                <br>
+                Dinsdag<br>
+                Gesloten<br>
+                <br>
+                Woensdag<br>
+                10.00 - 12.00 | 12.00 - 14.00 | 14.00 - 16.00 | 16.00 - 18.00 uur<br>
+                <br>
+                Donderdag<br>
+                10.00 - 12.00 | 12.00 - 14.00 | 14.00 - 16.00 | 16.00 - 18.00 uur<br>
+                <br>
+                Vrijdag<br>
+                10.00 - 12.00 | 12.00 - 14.00 | 14.00 - 16.00 | 16.00 - 18.00 | 18.00 - 21.00 uur<br>
+                <br>
+                Zaterdag<br>
+                10.00 - 12.00 | 12.00 - 14.00 | 14.00 - 16.00 | 16.00 - 18.00 uur<br>
+                <br>
+                Zondag<br>
+                12.00 - 14.00 | 14.00 - 16.00 | 16.00 - 18.00 uur</p>
+    <h3 id="Minigame" class="center">Minigame</h3>
+    <h3 id="Reviews" class="center">Reviews</h3>
+    <div class="container">
+        <div class="wrapper2">
+            <div class="card2">
+                <div class="card-thumb2">
+                    <img src="img/Reviews1.png" class="client-img" alt="">
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-thumb2">
+                    <img src="img\20221116_135612.jpg" class="client-img" alt="">
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-thumb2">
+                    <img src="img\20221116_133706.jpg" class="client-img" alt="">
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-thumb2">
+                    <img src="img\20221116_135159.jpg" class="client-img" alt="">
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-thumb2">
+                    <img src="img\20221116_135612.jpg" class="client-img" alt="">
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-thumb2">
+                    <img src="#" class="client-img" alt="">
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-thumb2">
+                    <img src="img\20221116_133706.jpg" class="client-img" alt="">
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-thumb2">
+                    <img src="img\20221116_135159.jpg" class="client-img" alt="">
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-thumb2">
+                    <img src="img\20221116_135612.jpg" class="client-img" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="indicators">
+            <div class="butten1">
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+            </div>
+            <div class="butten2">
+                <button></button>
+                <button></button>
+            </div>
+            <div class="butten3">
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+    </div>
+    <script src="index2.js"></script>
 </article>
-</div>
 </body>
 </html>
