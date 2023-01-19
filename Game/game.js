@@ -1,6 +1,7 @@
 import { GameRenderer } from "./gamerenderen.js";
 import { GameLogic } from "./gamelogic.js";
 import { rect } from "./rect.js";
+import { animation } from "./animations.js";
 
 class Game
 {
@@ -9,6 +10,8 @@ class Game
         this.renderer = new GameRenderer(this);
         this.logic = new GameLogic(this);
         this.player = new rect(0, 0, 24, 24);
+        this.playerCurrentAnim = this.renderer.playerIdle;
+        this.en = new rect(100, 100, 100, 100);
     }
 
     init()
