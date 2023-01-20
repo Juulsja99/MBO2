@@ -10,17 +10,17 @@ export class GameLogic
 
     mouseMoved(event)
     {
-     let factor = this.game.renderer.canvas.width/ this.game.renderer.canvas.clientwidth;
+     //let factor = this.game.renderer.canvas.width/ this.game.renderer.canvas.clientwidth;
 
      
-     this.game.player.x = event.offsetX * factor; 
-     this.game.player.y = event.offsetY * factor; 
+     this.game.player.x = event.offsetX;// * factor; 
+     this.game.player.y = event.offsetY;// * factor; 
     }
 
    logic()
    {
     let game = this.game;
-    if (circlesCollide(game.player,game.en))
+    if (circlesCollide(game.player, game.en))
     {
         game.playerCurrentAnim =game.renderer.playerHit;
     }

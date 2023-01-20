@@ -15,7 +15,7 @@ export function circlesCollide(cir1, cir2)
     let dy = cir1.cy() - cir2.cy();
 
     let length = Math.sqrt((dx*dx)+(dy*dy));
-    if (length <= cir1.w2() + cir2.w2());
+    if (length <= cir1.w2() + cir2.w2())
     {
         return true;
     }

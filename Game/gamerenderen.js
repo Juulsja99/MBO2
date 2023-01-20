@@ -59,7 +59,7 @@ export class GameRenderer
   {
     this.g.font = "30px Verdana";
     this.g.fillStyle = "#FFFF"
-    this.g.fillText("Score", 40, 40);
+    this.g.fillText("Score:", 40, 40);
   }
 
   render()
@@ -67,8 +67,8 @@ export class GameRenderer
    let g = this.g;
    g.fillStyle = "#44ab38";
    g.fillRect(0, 0, this.canvas.width, this.canvas.height);
-   this.renderSprite(this.images[0], this.playerCurrentAnim, this.game.player);
-   this.renderSprite(this.images[1], this.playerHit, this.game.hit)
+   this.renderSprite(this.images[0], this.playerIdle, this.game.player);
+   this.renderSprite(this.images[1], this.playerHit, this.game.player)
    this.renderSprite(this.images[2], this.enIdle, this.game.en);
 
     g.beginPath();
@@ -76,6 +76,7 @@ export class GameRenderer
     g.stroke();
 
     g.beginPath();
+    console.log(this.game.en);
     g.arc(this.game.en.cx(), this.game.en.cy(), this.game.en.w2(), 0, 2 * Math.PI);
     g.stroke();
 

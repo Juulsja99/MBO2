@@ -9,9 +9,9 @@ class Game
     {
         this.renderer = new GameRenderer(this);
         this.logic = new GameLogic(this);
-        this.player = new rect(0, 0, 24, 24);
+        this.player = new rect(0, 0, 204, 204);
         this.playerCurrentAnim = this.renderer.playerIdle;
-        this.en = new rect(100, 100, 100, 100);
+        this.en = new rect(300, 300, 100, 100);
     }
 
     init()
@@ -39,4 +39,4 @@ class Game
 
 let game = new Game()
 game.init();
-//game.render();
+//.game.render();
