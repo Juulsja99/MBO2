@@ -20,15 +20,19 @@ export class GameLogic
    logic()
    {
     let game = this.game;
+
+    game.playerCurrentAnim.moveToNextFrame(game.frametime);
     if (circlesCollide(game.player, game.en))
     {
-        game.playerCurrentAnim =game.renderer.playerHit;
+        game.playerCurrentAnim.setAnimation("Idle"); 
+        //.= game.renderer.playerHit;
     }
    
     else
     {
         game.en.x += 1;
-        game.playerCurrentAnim =game.renderer.playerIdle;
+        game.playerCurrentAnim.setAnimation("Hit");
+        //.game.playerCurrentAnim =game.renderer.playerIdle;
 
     }
     

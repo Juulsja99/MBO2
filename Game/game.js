@@ -1,7 +1,7 @@
 import { GameRenderer } from "./gamerenderen.js";
 import { GameLogic } from "./gamelogic.js";
 import { rect } from "./rect.js";
-import { animation } from "./animations.js";
+import { Animation } from "./animations.js";
 
 class Game
 {
@@ -9,9 +9,17 @@ class Game
     {
         this.renderer = new GameRenderer(this);
         this.logic = new GameLogic(this);
-        this.player = new rect(0, 0, 204, 204);
-        this.playerCurrentAnim = this.renderer.playerIdle;
+        this.player = new rect(0, 0, 100, 100);
+
+        let animationsMap = {
+            "Idle": [new rect(7,10,390,253),new rect(186,10,390,253)],
+            "Hit" : [new rect(186,201,390,253),new rect(186,201,390,253)]
+        };
+        
+        this.playerCurrentAnim = new Animation(animationsMap);
+        //.this.renderer.playerIdle;
         this.en = new rect(300, 300, 100, 100);
+        this.frametime = 33;
     }
 
     init()
@@ -26,7 +34,7 @@ class Game
         {
           scope.logic.mouseMoved(event); 
         } )
-       setInterval(function () {scope.doGameFrame() }, 33);
+       setInterval(function () {scope.doGameFrame() }, this.frametime);
     }
 
     doGameFrame()
