@@ -1,0 +1,89 @@
+footer{
+    background: #000;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+    --bg: #dcdde1;     
+    --color-icon: #535c68;  
+    --social-icon1: #e4405f;
+    --social-icon2: #3b5999;
+    --social-icon3: #e4405f;
+    --social-icon4: #cd201f;
+    --social-icon5: #0077B5;  
+  }
+
+
+  
+  .icon-list {
+    width: 200px;
+    max-width: 50rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .icon-item {
+    list-style: none
+  }
+  
+  .icon-link {  
+    display: inline-flex;
+    font-size: 1rem;  
+    text-decoration: none;  
+    color: var(--color-icon);
+    width: 2rem;
+    height: 2rem;   
+    transition: .5s linear;
+    position: relative;
+    z-index: 1;
+    margin: auto
+  }
+  
+  .icon-link:hover {
+    color: #fff;
+  }
+  
+  .icon-link i {
+    margin: auto;    
+  }
+  
+  .icon-link::before {  
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 2rem;
+    height: 2rem;
+    background: #000;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+  }
+    
+  .icon-link:hover::before {  
+    transform: scale(1);
+  }
+  
+  .icon-item:nth-child(1) a:hover:before { 
+    background: var(--social-icon1); 
+  }
+  
+  .icon-item:nth-child(2) a:hover:before { 
+    background: var(--social-icon2); 
+  }
+  
+  .icon-item:nth-child(3) a:hover:before { 
+    background: var(--social-icon5); 
+  }
+  
+  .icon-item:nth-child(4) a:hover:before { 
+    background: var(--social-icon4); 
+  }
