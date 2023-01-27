@@ -16,12 +16,13 @@ export class GameRenderer
    //.this.playerIdle = new rect(7,10,390,253);
    //.this.playerHit = new rect(186,201,390,253);
    this.enIdle = new rect(7,10,390,253);
+   this.moleheap = new rect (152, 264, 152, 111);
    
   }
   
   loadImages()
   {
-    let sources = ["img/hamer.jpeg", "img/hamerhit.png", "img/lara2.png", "img/link.jpeg", "img/mario.jpeg", "img/pac man.jpeg", "img/pikachu.jpeg", "img/Sonic.jpeg", "img/achtergrond.jpeg", "img/bomberman.jpeg"];
+    let sources = ["img/hamer.png", "img/hamerhit.png", "img/lara2.png", "img/link.jpeg", "img/mario.jpeg", "img/pac man.jpeg", "img/pikachu.jpeg", "img/Sonic.jpeg", "img/achtergrond.jpeg", "img/bomberman.jpeg"];
     let scope = this;
     let loaded = 0;
 
@@ -68,19 +69,19 @@ export class GameRenderer
    
    let animObject = this.game.playerCurrentAnim;   
 
-   this.renderSprite(this.images[0], animObject.getCurrentFrame(), this.game.player)
-
    
 
    for (var i = 0; i < this.game.moles.length; i++)
    {
      let mole = this.game.moles[i];
+     this.renderSprite(this.images[0], this.moleheap,  mole.rect);
+
      if (mole.visable)
       {
         this.renderSprite(this.images[4], this.enIdle, mole.rect);
       }
    } 
-
+   this.renderSprite(this.images[0], animObject.getCurrentFrame(), this.game.player)
    this.renderUi()
 
     g.beginPath();
