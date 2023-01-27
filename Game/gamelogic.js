@@ -10,11 +10,53 @@ export class GameLogic
 
     mouseMoved(event)
     {
-     //let factor = this.game.renderer.canvas.width/ this.game.renderer.canvas.clientwidth;
+     let factor = this.game.renderer.canvas.width/ this.game.renderer.canvas.clientwidth;
 
      
      this.game.player.x = event.offsetX;// * factor; 
      this.game.player.y = event.offsetY;// * factor; 
+    }
+
+    mouseClick(event)
+    {
+     let factor = this.game.renderer.canvas.width/ this.game.renderer.canvas.clientwidth;
+
+     
+     this.game.player.x = event.offsetX;// * factor; 
+     this.game.player.y = event.offsetY;// * factor; 
+     let hiti = this.getHitMole();
+     if (hiti != -1)
+    {
+        let mole = this.game.moles[hiti];
+        mole.visable = false;
+        
+
+    }
+   
+    }
+
+    getHitMole()
+    {
+        let game = this.game;
+        let didhit=-1;
+        for (var i = 0; i < this.game.moles.length; i++)
+        { 
+            let mole = this.game.moles[i];
+            if (mole.visable)
+            {
+                if (circlesCollide(game.player, mole.rect))
+                {
+                    didhit=i; 
+                    break;
+                
+                }
+            }    
+            
+
+        }
+   
+        return didhit;
+
     }
 
    logic()
@@ -22,17 +64,14 @@ export class GameLogic
     let game = this.game;
 
     game.playerCurrentAnim.moveToNextFrame(game.frametime);
-    if (circlesCollide(game.player, game.en))
-    {
-        game.playerCurrentAnim.setAnimation("Idle"); 
-        //.= game.renderer.playerHit;
-    }
    
-    else
+    game.playerCurrentAnim.setAnimation("Idle");
+      
+    let didhit=false;
+
+    if (this.getHitMole() != -1)
     {
-        game.en.x += 1;
         game.playerCurrentAnim.setAnimation("Hit");
-        //.game.playerCurrentAnim =game.renderer.playerIdle;
 
     }
     

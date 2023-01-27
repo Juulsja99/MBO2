@@ -56,7 +56,7 @@ export class GameRenderer
   {
     this.g.font = "30px Verdana";
     this.g.fillStyle = "#FFFF"
-    this.g.fillText("Score:", 40, 40);
+    this.g.fillText("Score:"+this.game.score, 40, 40);
   }
 
   render()
@@ -70,19 +70,26 @@ export class GameRenderer
 
    this.renderSprite(this.images[0], animObject.getCurrentFrame(), this.game.player)
 
-   this.renderSprite(this.images[2], this.enIdle, this.game.en);
+   
+
+   for (var i = 0; i < this.game.moles.length; i++)
+   {
+     let mole = this.game.moles[i];
+     if (mole.visable)
+      {
+        this.renderSprite(this.images[4], this.enIdle, mole.rect);
+      }
+   } 
+
+   this.renderUi()
 
     g.beginPath();
     g.arc(this.game.player.cx(), this.game.player.cy(), this.game.player.w2(), 0, 2 * Math.PI);
+    g.strokeStyle = "Transparent";
     g.stroke();
 
-    g.beginPath();
-    console.log(this.game.en);
-    g.arc(this.game.en.cx(), this.game.en.cy(), this.game.en.w2(), 0, 2 * Math.PI);
-    //.g.strokeStyle = "Transparent";
-    g.stroke();
-
-    this.renderUi()
+    
+    
 
  }
 }
