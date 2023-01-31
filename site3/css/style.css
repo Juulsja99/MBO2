@@ -26,7 +26,6 @@ section:nth-of-type(7){
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
 }
 section figure{
   position:absolute;
